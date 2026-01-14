@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222;
+    line-height: 1.5;
+}
+
+h1, h2, h3, h4 {
+    color: #1f4fd8;
+}
+
+a {
+    color: #1f4fd8;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Accessible focus state for keyboard navigation */
+a:focus,
+a:focus-visible {
+    outline: 2px solid #1f4fd8;
+    outline-offset: 2px;
+}
+
+/* Preserve readability for code blocks if added later */
+code,
+pre {
+    font-family: Consolas, Monaco, "Courier New", monospace;
+}

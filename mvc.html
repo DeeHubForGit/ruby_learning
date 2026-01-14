@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>MVC – Ruby Cheat Sheet</title>
+    <link rel="stylesheet" href="assets/theme.css">
 
     <style>
         .model-section,
         .view-section,
-        .controller-section {
+        .controller-section, 
+        .mvc-section {
             display: flex;
             gap: 12px;
             align-items: flex-start;
@@ -33,19 +35,25 @@
         }
 
         .controller-diagram {
+            flex: 0 0 220px;
+        }
+
+        .mvc-diagram {
             flex: 0 0 420px;
         }
 
         .model-diagram,
         .view-diagram,
-        .controller-diagram {
+        .controller-diagram,
+        .mvc-diagram {
             margin-top: 0;
             padding-top: 2em;
         }
 
         .model-diagram img,
         .view-diagram img,
-        .controller-diagram img {
+        .controller-diagram img,
+        .mvc-diagram img {
             width: 100%;
             height: auto;
             display: block;
@@ -57,7 +65,7 @@
 <p><a href="index.html">← Back to Ruby Cheat Sheet</a></p>
 <div class="model-section">
     <div class="model-text">
-        <h4>Model</h4>
+        <h2>Model</h2>
         <p>The <strong>Model</strong> represents the data and business rules of the application.</p>
         <ul>
             <li>Talks to the database</li>
@@ -66,7 +74,7 @@
             <li>Knows how data can be created, changed and queried</li>
         </ul>
         <p>In Rails, models are Ruby classes that usually map to database tables.</p>
-        <p><strong>Think</strong> rules and data.</p>
+        <p>Think <strong>rules and data.</strong></p>
     </div>
     <div class="model-diagram">
         <img src="images/ruby-model-example.png" alt="Customer and Order model class diagram">
@@ -74,7 +82,7 @@
 </div>
 <div class="view-section">
     <div class="view-text">
-        <h4>View</h4>
+        <h2>View</h2>
         <p>The <strong>View</strong> is responsible for what the user sees.</p>
         <ul>
             <li>Displays data</li>
@@ -83,7 +91,7 @@
             <li>Does not make decisions or change data</li>
         </ul>
         <p>In Rails, views are templates that generate HTML.</p>
-        <p><strong>Think</strong> display.</p>
+        <p>Think <strong>display.</strong></p>
     </div>
     <div class="view-diagram">
         <img src="images/ruby-view-example.png" alt="View class that shows data from the model.">
@@ -91,7 +99,7 @@
 </div>  
 <div class="controller-section">
     <div class="controller-text">
-        <h4>Controller</h4>
+        <h2>Controller</h2>
         <p>The <strong>Controller</strong> coordinates between the model and the view.</p>
         <ul>
             <li>Receives requests from the browser</li>
@@ -100,10 +108,52 @@
             <li>Decides which view to render</li>
         </ul>
         <p>Controllers should not contain business logic.</p>
-        <p><strong>Think</strong> traffic controller.</p>
+        <p>Think <strong>traffic controller.</strong></p>
     </div>
     <div class="controller-diagram">
-        <img src="images/ruby-controller-diagram.png" alt="Controller class that controls the flow between model and view.">
+        <img src="images/ruby-controller-example.png" alt="Controller class that controls the flow between model and view.">
+    </div>
+</div>
+<div class="mvc-section">
+    <div class="mvc-text">
+        <h2>MVC</h2>
+        <p>Model View Controller (MVC) is a way of structuring an application so that responsibilities are clearly separated.</p>
+        <p>Each part has a single job, which makes the system easier to understand, test, and change.</p>
+        <h3>How MVC works in practice</h3>
+        <ol>
+            <li>
+                <strong>The user interacts with the View</strong>
+                <p>For example, selecting a customer to view their orders.</p>
+            </li>
+            <li>
+                <strong>The View sends a request to the Controller</strong>
+                <p>The View does not fetch data itself.</p>
+                <p>It asks the Controller what it needs.</p>
+            </li>
+            <li>
+                <strong>The Controller asks the Model for data</strong>
+                <p>The Controller coordinates the request and calls the appropriate model methods.</p>
+            </li>
+            <li>
+                <strong>The Model returns the data</strong>
+                <p>The Model handles business rules and data access, such as retrieving orders and calculating totals.</p>
+            </li>
+            <li>
+                <strong>The View displays the result</strong>
+                <p>The Controller passes the data back to the View, which displays it to the user.</p>
+            </li>
+        </ol>
+        <h3>Key ideas to remember</h3>
+        <ul>
+            <li>The <strong>View</strong> displays data only</li>
+            <li>The <strong>Controller</strong> coordinates actions and flow</li>
+            <li>The <strong>Model</strong> contains rules, data, and calculations</li>
+            <li>The View never talks directly to the Model</li>
+            <li>The Model never knows about the View</li>
+        </ul>
+    </div>
+    <div class="mvc-diagram">
+        <img src="images/ruby-mvc-example.png" alt="MVC diagram showing interaction between Model, View and Controller">
     </div>
 </div>
 </body>
