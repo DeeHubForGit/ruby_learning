@@ -135,11 +135,27 @@ numbers.pop         <span class="c"># removes last item</span>
         <div class="block">
             <h3>Hashes</h3>
             <ul>
-                <li><strong>Creating a hash</strong>: <code>my_hash = { "key1" => "value1", "key2" => "value2" }</code></li>
-                <li><strong>Accessing values</strong>: <code>my_hash["key1"]</code></li>
-                <li><strong>Adding key-value pairs</strong>: <code>my_hash["key3"] = "value3"</code></li>
-                <li><strong>Removing key-value pairs</strong>: <code>my_hash.delete("key2")</code></li>
+                <li>Key–value data structure</li>
+                <li>Keys are usually symbols or strings</li>
+                <li>Values accessed using keys</li>
+                <li>Can add and remove key–value pairs</li>
             </ul>
+            <pre><code><span class="c"># Create a hash</span>
+<span class="c"># Keys can also be symbols (shown later)</span>
+user = {
+  "name" => "Alice",
+  "age"  => 25
+}
+
+<span class="c"># Access values</span>
+user["name"]   <span class="c"># "Alice"</span>
+user["age"]    <span class="c"># 25</span>
+
+<span class="c"># Add a key-value pair</span>
+user["email"] = "alice@example.com"
+
+<span class="c"># Remove a key-value pair</span>
+user.delete("age")</code></pre>
         </div>
         <div class="block">
             <h3>Symbols (:symbol)</h3>
@@ -339,10 +355,14 @@ end</code></pre>
 
         <div class="block">
             <h3>Methods</h3>
-            <p>Methods are reusable blocks of code that perform a specific task. They help keep your code organised and DRY (Don't Repeat Yourself).  
-                Implicit return means the last evaluated expression is returned without needing the <code>return</code> keyword.
-                No parentheses are needed for method calls with no arguments.
-            </p>
+            <ul>
+                <li>Reusable blocks of code that perform a task</li>
+                <li>Used to organise code and reduce repetition (DRY)</li>
+                <li>Can take arguments (parameters)</li>
+                <li>Return a value (usually the last line)</li>
+                <li>return keyword is optional</li>
+                <li>Parentheses are optional when calling methods with no arguments</li>
+            </ul>
             <pre><code>def total(price, qty)
     price * qty
 end</code></pre>
@@ -447,10 +467,13 @@ a < 5 || b < 10   <span class="c"># true</span>
             <h2>Reusable Code</h2>
             <div class="gems">
                 <h3>Gems</h3>
-                <p>
-                    Ruby gems are reusable libraries that add features to Ruby so you do not have to write everything from scratch.
-                    You can install them using the <code>gem</code> command.
-                </p>
+                <ul>
+                    <li>Reusable libraries that add features to Ruby</li>
+                    <li>Used to avoid writing everything from scratch</li>
+                    <li>Installed using the gem command</li>
+                    <li>Commonly used in Ruby and Rails projects</li>
+                </ul>
+                <pre><code>gem install rails</code></pre>
                 <!-- NO UNNECESSARY DETAIL
                 <p><b>Common gems include:</b></p>
                 <ul>
@@ -485,12 +508,13 @@ puts data["name"]
         </div>
         <div class="block">
             <h4>Rails</h4>
-            <p>
-                Rails is a web application framework written in Ruby. 
-                It follows the <a href="mvc.html">MVC (Model View Controller)</a> architecture and provides a structured way to build web applications quickly. 
-                It is distributed as a gem, but functions as a full framework composed of many smaller gems.
-            </p>
-            <p>You can install Rails using the <code>gem install rails</code> command.</p>
+            <ul>
+                <li>Web application framework written in Ruby</li>
+                <li>Follows the <a href="mvc.html">MVC (Model View Controller)</a> pattern</li>
+                <li>Provides structure for building web apps quickly</li>
+                <li>Distributed as a gem but made up of many smaller gems</li>
+            </ul>
+            <pre><code>gem install rails</code></pre>
         </div>
     </div>
 </body>
