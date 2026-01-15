@@ -33,9 +33,9 @@ pre {
   font-family: Consolas, Monaco, "Courier New", monospace;
   margin: 0 0 0.75rem 0;        /* space after the block only */
   padding: 0.75rem;
-  background-color: powderblue; /* pick ONE colour */
+  background: #eef2f6; 
   border-radius: 6px;
-
+  border: 1px solid #e2e8f0;
   display: inline-block;        /* shrink background to content width */
   max-width: 100%;
   box-sizing: border-box;
@@ -49,6 +49,10 @@ pre code {
   margin: 0;
   padding: 0;
   background: none;
+}
+
+pre code span.c {
+  color: #806b6d;
 }
 
 /* Normalise vertical spacing (exclude pre) */
@@ -127,12 +131,16 @@ h4 {
   page-break-inside: avoid;
 }
 
-/* Inline code */
-code {
-  background-color: powderblue;
-  padding: 0.15em 0.3em;
-  border-radius: 4px;
-  font-family: Consolas, Monaco, "Courier New", monospace;
+/* Inline code only */
+:not(pre) > code {
+  color: #2563eb;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+pre code {
+  color: inherit;
+  font-weight: normal;
 }
 
 

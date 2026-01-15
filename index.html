@@ -17,6 +17,21 @@
             <pre><code>print "This will print the text to the screen without moving to the next line"</code></pre>
         </div>
         <div class="block">
+            <h2>Comments</h2>
+            <ul>
+                <li>Comments start with #</li>
+                <li>Used to explain code</li>
+                <li>Ignored when the program runs</li>
+            </ul>
+            <pre><code><span class="c"># This is a comment</span>
+puts "This runs"
+<span class="c">
+# Ruby does not have a true multi-line comment.
+# Use # at the start of each line.
+# All lines starting with # are comments.
+</span></code></pre>
+        </div>
+        <div class="block">
             <h2>Variables</h2>
             <h3>Local Variables</h3>
             <ul>
@@ -68,24 +83,54 @@ puts "#{name} is #{age}"</code></pre>
         </div>
         <div class="block">
             <h3>Basic Data Types</h3>
-            <ul>
-                <li><strong>String</strong>: Text data, e.g. <code>"Hello, World!"</code></li>
-                <li><strong>Integer</strong>: Whole numbers, e.g. <code>42</code>, <code>-7</code></li>
-                <li><strong>Float</strong>: Decimal numbers, e.g. <code>3.14</code>, <code>-0.001</code></li>
-                <li><strong>Boolean</strong>: <code>true</code> or <code>false</code> values</li>
-                <li><strong>Array</strong>: Ordered list of items, e.g. <code>[1, 2, 3]</code></li>
-                <li><strong>Hash</strong>: Key-value pairs, e.g. <code>{ "name" => "Alice", "age" => 25 }</code></li>
-                <li><strong>Nil</strong>: Represents "nothing" or "no value", e.g. <code>nil</code></li>
-            </ul>
+            <pre><code># String: text data
+"Hello, World!"
+
+# Integer: whole numbers
+42
+-7
+
+# Float: decimal numbers
+3.14
+-0.001
+
+# Boolean: true or false
+true
+false
+
+# Array: ordered list of items
+[1, 2, 3]
+
+# Hash: key-value pairs
+{ name: "Alice", age: 25 }
+
+# Nil: represents no value
+nilZ</code></pre>
         </div>
         <div class="block">
             <h3>Arrays</h3>
             <ul>
-                <li><strong>Creating an array</strong>: <code>my_array = [1, 2, 3]</code></li>
-                <li><strong>Accessing elements</strong>: <code>my_array[0]</code> (first element)</li>
-                <li><strong>Adding elements</strong>: <code>my_array << 4</code></li>
-                <li><strong>Removing elements</strong>: <code>my_array.pop</code></li>
+                <li>Ordered list of items</li>
+                <li>Indexed by position (starts at 0)</li>
+                <li>Can create, access, add and remove items</li>
+                <li><code><<</code> or <code>push</code> appends an item to the end</li>
             </ul>
+            <pre><code># Create an array
+numbers = [1, 2, 3]
+
+# Access elements (index starts at 0)
+numbers[0]   # 1
+numbers[1]   # 2
+
+# Add elements
+numbers << 4        # append using <<
+numbers.push(5)     # append using method
+
+# Remove elements
+numbers.pop         # removes last item
+
+# Resulting array
+# [1, 2, 3, 4]</code></pre>
         </div>
         <div class="block">
             <h3>Hashes</h3>
@@ -303,6 +348,32 @@ end</code></pre>
 end</code></pre>
         </div>
         <div class="block">
+            <h3>Method Return Values</h3>
+            <ul>
+                <li>Methods always return a value</li>
+                <li>The last evaluated expression is returned</li>
+                <li>return can be used explicitly (optional)</li>
+            </ul>
+            <pre><code>def total(price, qty)
+  price * qty
+end
+
+result = total(10, 3)   # 30</code></pre>
+        </div>
+        <div class="block">
+            <h3>Classes</h3>
+            <ul>
+                <li>Blueprints for creating objects</li>
+                <li>Group data (variables) and behaviour (methods)</li>
+                <li>Used to represent things like users, orders or settings</li>
+            </ul>
+            <pre><code>class Order
+    def total
+        44.50
+    end
+end</code></pre>
+        </div>
+        <div class="block">
             <h3>Accessors (attr_reader, attr_writer, attr_accessor)</h3>
             <ul>
                 <li>Create getter and/or setter methods automatically</li>
@@ -319,19 +390,6 @@ end</code></pre>
     @age = age
   end
 end</code></pre>
-        </div>
-        <div class="block">
-            <h3>Method Return Values</h3>
-            <ul>
-                <li>Methods always return a value</li>
-                <li>The last evaluated expression is returned</li>
-                <li>return can be used explicitly (optional)</li>
-            </ul>
-            <pre><code>def total(price, qty)
-  price * qty
-end
-
-result = total(10, 3)   # 30</code></pre>
         </div>
         <div class="block">
             <h3>Implicit Return</h3>
@@ -384,15 +442,6 @@ a <= b     # false
 a > 5 && b < 10   # true
 a < 5 || b < 10   # true
 !false            # true</code></pre>
-        </div>
-        <div class="block">
-            <h3>Classes</h3>
-            <p>Classes are blueprints for creating objects. They encapsulate data and behaviour related to that data.</p>
-            <pre><code>class Order
-    def total
-        44.50
-    end
-end</code></pre>
         </div>
         <div class="block">
             <h2>Reusable Code</h2>
