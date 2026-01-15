@@ -40,7 +40,7 @@ pre {
   max-width: 100%;
   box-sizing: border-box;
   overflow-x: auto;
-  white-space: pre;
+  white-space: pre-wrap;   /* allow wrapping within code blocks */
 }
 
 /* Remove any chance of extra spacing from the <code> inside <pre> */
@@ -83,4 +83,57 @@ h3 {
 h4 {
   margin: 0.75rem 0 0.25rem;
 }
+
+/* Mobile default: 1 column */
+.cheatsheet {
+  column-count: 1;
+  column-gap: 1.25rem;
+}
+
+/* Desktop: 3 columns */
+@media (min-width: 900px) {
+  .cheatsheet {
+    column-count: 3;
+  }
+}
+
+/* Wide screens: 4 columns */
+@media (min-width: 1200px) {
+  .cheatsheet {
+    column-count: 4;
+  }
+}
+
+/* Stop ugly splits */
+.cheatsheet h2,
+.cheatsheet h3,
+.cheatsheet h4,
+.cheatsheet p,
+.cheatsheet ul,
+.cheatsheet pre {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+/* Code blocks behave nicely in columns */
+.cheatsheet pre {
+  display: block;     /* fills the column width */
+  width: 100%;
+  max-width: 100%;
+}
+
+.block {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+/* Inline code */
+code {
+  background-color: powderblue;
+  padding: 0.15em 0.3em;
+  border-radius: 4px;
+  font-family: Consolas, Monaco, "Courier New", monospace;
+}
+
+
 

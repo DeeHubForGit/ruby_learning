@@ -8,129 +8,321 @@
 </head>
 <body>
     <h1>Ruby Cheat Sheet</h1>
-    <h2>Output</h2>
-    <h3>puts</h3>
-    <pre>puts "This will print the text to the screen then move to the next line"</pre>
-    <h3>print</h3>
-    <pre>print "This will print the text to the screen without moving to the next line"</pre>
-
-    <h2>Variables</h2>
-    <h3>Local Variables</h3>
-    <ul>
-        <li>Start with a lowercase letter or underscore and an underscore between multiple words (snake_case).</li>
-        <li>Scope is limited to the block or method where the variable is defined.</li>
-        <li>Do <strong>not</strong> need to be declared before use.</li>
-        <li>Are created when first assigned a value.</li>
-    </ul>
-    <pre><code>count = 10
+    <div class="cheatsheet">
+        <div class="block">
+            <h2>Output</h2>
+            <h3>puts</h3>
+            <pre>puts "This will print the text to the screen then move to the next line"</pre>
+            <h3>print</h3>
+            <pre>print "This will print the text to the screen without moving to the next line"</pre>
+        </div>
+        <div class="block">
+            <h2>Variables</h2>
+            <h3>Local Variables</h3>
+            <ul>
+                <li>Start with a lowercase letter or underscore and an underscore between multiple words (snake_case).</li>
+                <li>Scope is limited to the block or method where the variable is defined.</li>
+                <li>Do <strong>not</strong> need to be declared before use.</li>
+                <li>Are created when first assigned a value.</li>
+            </ul>
+            <pre><code>count = 10
 _name = "Ruby"
 total_price = count * 5</code></pre>
-    <h3>Naming Style</h3>
-    <ul>
-        <li>Use snake_case for variable names.</li>
-        <li>Be descriptive, not abbreviated.</li>
-        <li>Avoid using reserved words as variable names.</li>
-    </ul>   
-    <p><strong>Good Naming</strong></p>
-    <pre><code>user_name = "Joe"
+        </div>
+        <div class="block">
+            <h3>Naming Style</h3>
+            <ul>
+                <li>Use snake_case for variable names.</li>
+                <li>Be descriptive, not abbreviated.</li>
+                <li>Avoid using reserved words as variable names.</li>
+            </ul>   
+        </div>
+        <div class="block">
+            <p><strong>Good Naming</strong></p>
+            <pre><code>user_name = "Joe"
 total_items = 3
 is_valid = true</code></pre>
-    <p><strong>Bad Naming</strong></p>
-    <pre><code>x = 5
+        </div>
+        <div class="block">
+            <p><strong>Bad Naming</strong></p>
+            <pre><code>x = 5
 tmp = "data"</code></pre>
-    <h3>Dynamic Typing</h3>
-    <pre><code>name = "Joe"
+        </div>
+        <div class="block">
+            <h3>Dynamic Typing</h3>
+            <pre><code>name = "Joe"
 age = 30
 puts "#{name} is #{age}"</code></pre>
-    <h3>Basic Data Types</h3>
-    <ul>
-        <li><strong>String</strong>: Text data, e.g. "Hello, World!"</li>
-        <li><strong>Integer</strong>: Whole numbers, e.g. 42, -7</li>
-        <li><strong>Float</strong>: Decimal numbers, e.g. 3.14, -0.001</li>
-        <li><strong>Boolean</strong>: true or false values</li>
-        <li><strong>Array</strong>: Ordered list of items, e.g. [1, 2, 3]</li>
-        <li><strong>Hash</strong>: Key-value pairs, e.g. { "name" => "Alice", "age" => 25 }</li>
-        <li><strong>Nil</strong>: Represents "nothing" or "no value", e.g. nil</li>
-    </ul>
-    <h3>Arrays</h3>
-    <ul>
-        <li><strong>Creating an array</strong>: <code>my_array = [1, 2, 3]</code></li>
-        <li><strong>Accessing elements</strong>: <code>my_array[0]</code> (first element)</li>
-        <li><strong>Adding elements</strong>: <code>my_array << 4</code></li>
-        <li><strong>Removing elements</strong>: <code>my_array.pop</code></li>
-    </ul>
-    <h3>Hashes</h3>
-    <ul>
-        <li><strong>Creating a hash</strong>: <code>my_hash = { "key1" => "value1", "key2" => "value2" }</code></li>
-        <li><strong>Accessing values</strong>: <code>my_hash["key1"]</code></li>
-        <li><strong>Adding key-value pairs</strong>: <code>my_hash["key3"] = "value3"</code></li>
-        <li><strong>Removing key-value pairs</strong>: <code>my_hash.delete("key2")</code></li>
-    </ul>
-    <h2>Conditionals</h2>
-    <h3>if, elsif, else</h3>
-    <pre><code>if total > 40
+        </div>
+        <div class="block">
+            <h3>Basic Data Types</h3>
+            <ul>
+                <li><strong>String</strong>: Text data, e.g. <code>"Hello, World!"</code></li>
+                <li><strong>Integer</strong>: Whole numbers, e.g. <code>42</code>, <code>-7</code></li>
+                <li><strong>Float</strong>: Decimal numbers, e.g. <code>3.14</code>, <code>-0.001</code></li>
+                <li><strong>Boolean</strong>: <code>true</code> or <code>false</code> values</li>
+                <li><strong>Array</strong>: Ordered list of items, e.g. <code>[1, 2, 3]</code></li>
+                <li><strong>Hash</strong>: Key-value pairs, e.g. <code>{ "name" => "Alice", "age" => 25 }</code></li>
+                <li><strong>Nil</strong>: Represents "nothing" or "no value", e.g. <code>nil</code></li>
+            </ul>
+        </div>
+        <div class="block">
+            <h3>Arrays</h3>
+            <ul>
+                <li><strong>Creating an array</strong>: <code>my_array = [1, 2, 3]</code></li>
+                <li><strong>Accessing elements</strong>: <code>my_array[0]</code> (first element)</li>
+                <li><strong>Adding elements</strong>: <code>my_array << 4</code></li>
+                <li><strong>Removing elements</strong>: <code>my_array.pop</code></li>
+            </ul>
+        </div>
+        <div class="block">
+            <h3>Hashes</h3>
+            <ul>
+                <li><strong>Creating a hash</strong>: <code>my_hash = { "key1" => "value1", "key2" => "value2" }</code></li>
+                <li><strong>Accessing values</strong>: <code>my_hash["key1"]</code></li>
+                <li><strong>Adding key-value pairs</strong>: <code>my_hash["key3"] = "value3"</code></li>
+                <li><strong>Removing key-value pairs</strong>: <code>my_hash.delete("key2")</code></li>
+            </ul>
+        </div>
+        <div class="block">
+            <h3>Symbols (:symbol)</h3>
+            <ul>
+                <li>Lightweight, immutable (cannot be changed) identifiers.</strong></li>
+                <li>Used as <strong>names or labels</strong>, not data.</li>
+                <li>Common as <strong>hash keys</strong> and method arguments.</li>
+            </ul>
+            <pre><code># Symbol
+:status
+:user_id
+:is_valid
+
+"name"    # String (can be changed)
+:name     # Symbol (cannot be changed)</code></pre>
+        </div>
+        <div class="block">
+            <h2>Conditionals</h2>
+            <h3>if, elsif, else</h3>
+            <pre><code># Basic if statement
+if total > 40
     puts "Large order"
-end</code>
-<code>puts "Large order" if total > 40</code></pre>
-    <h3>Loops/Iteration</h3>
-    <ul>
-        <li><strong>Each</strong>: Iterates over an array:</li>
-    </ul>
-    <pre><code>orders.each do |order|
+end
+
+# Ruby-style one line
+puts "Large order" if total > 40
+
+# Using elsif and else
+if total > 100
+  puts "Free shipping"
+elsif total > 40
+  puts "Standard shipping"
+else
+  puts "Shipping applies"
+end</code></pre>
+        </div>
+        <div class="block">
+            <h3>Case / When (conditional branching)</h3>
+            <ul>
+                <li>Used to compare one value against many options</li>
+                <li>Cleaner than long <code>if</code> / <code>elsif</code> chains</li>
+                <li>Uses <code>when</code> instead of <code>elsif</code></li>
+            </ul>
+            <pre><code>status = :paid    # value being checked
+
+case status
+when :paid
+  puts "Order paid"
+when :pending
+  puts "Awaiting payment"
+else
+  puts "Unknown status"
+end</code></pre>
+        </div>
+
+        <div class="block">
+            <h3>Exception Handling (begin / rescue / ensure)</h3>
+            <ul>
+                <li>Used to handle runtime errors safely</li>
+                <li>Prevents program crashes</li>
+                <li><code>rescue</code> catches errors</li>
+                <li><code>ensure</code> always runs (optional)</li>
+            </ul>
+            <pre><code>begin
+  result = 10 / 0
+rescue ZeroDivisionError
+  puts "Cannot divide by zero"
+ensure
+  puts "Done"
+end
+
+# Rescue shorthand (common)
+result = 10 / value rescue nil</code></pre>
+        </div>
+
+        <div class="block">
+            <h3>Truthiness (nil vs false) (Ruby-specific)</h3>
+            <ul>
+                <li>Only false and nil are treated as false</li>
+                <li>Everything else is treated as true</li>
+                <li>Commonly used in <code>if</code>, <code>elsif</code>, <code>unless</code></li>
+            </ul>
+            <pre><code>false   # false
+nil     # false
+
+0       # true
+""      # true (empty string)
+[]      # true (empty array)
+
+if value
+  puts "Runs unless value is false or nil"
+end</code></pre>
+        </div>
+<div class="block">
+            <h3>Safe Navigation (&.)</h3>
+            <ul>
+                <li>Used to safely call methods on something that might be <code>nil</code></li>
+                <li>Prevents <code>NoMethodError</code></li>
+                <li>Returns <code>nil</code> if the object is <code>nil</code></li>
+            </ul>
+            <pre><code>user = nil
+
+user.name
+# NoMethodError
+
+user&.name
+# nil
+
+order&.customer&.email
+# Safe even if order or customer is nil</code></pre>
+        </div>
+
+        <div class="block">
+            <h3>Blocks (do..end, { })</h3>
+            <ul>
+                <li>Blocks are chunks of code passed to methods and executed later.</li>
+                <li>Use do..end for multi-line blocks.</li>
+                <li>Use { } for single-line blocks.</li>
+            </ul>
+            <pre><code># Multi-line block
+[1, 2, 3].each do |n|
+    puts n
+end
+
+# Single-line block
+[1, 2, 3].each { |n| puts n }</code></pre>
+        </div>
+        <div class="block">
+            <h3>Loops/Iteration</h3>
+            <ul>
+                <li><strong>Each</strong>: Iterates over an array:</li>
+            </ul>
+            <pre><code>orders.each do |order|
     puts order[:id]
 end</code></pre>
-    <ul>
-        <li><strong>Times</strong>: Repeats a block a specified number of times:</li>
-    </ul>
-    <pre><code>5.times do |i|
+            <ul>
+                <li><strong>Times</strong>: Repeats a block a specified number of times:</li>
+            </ul>
+            <pre><code>5.times do |i|
     puts "Iteration #{i + 1}"
 end</code></pre>
-    <h3>Methods</h3>
-    <p>Methods are reusable blocks of code that perform a specific task. They help keep your code organised and DRY (Don't Repeat Yourself).  
-        Implicit return means the last evaluated expression is returned without needing the <code>return</code> keyword.
-        No parentheses are needed for method calls with no arguments.
-    </p>
-    <pre><code>def total(price, qty)
-    price * qty
-end</code></pre>
-    <h3>Classes</h3>
-    <p>Classes are blueprints for creating objects. They encapsulate data and behaviour related to that data.</p>
-    <pre><code>class Order
+        </div>
+        <div class="block">
+            <h3>Ranges (.. and ...)</h3>
+            <ul>
+                <li>Represent a sequence of values</li>
+                <li>Commonly used in loops and conditionals</li>
+                <li><code>..</code> includes the end value</li>
+                <li><code>...</code> excludes the end value</li>
+            </ul>
+            <pre><code># Inclusive range
+(1..5).each do |n|
+  puts n
+end
+
+# Exclusive range
+(1...5).each do |n|
+  puts n
+end
+
+# Range in condition
+age = 25
+puts "Adult" if (18..65).include?(age)</code></pre>
+        </div>
+        <div class="block">
+            <h3>Classes</h3>
+            <p>Classes are blueprints for creating objects. They encapsulate data and behaviour related to that data.</p>
+            <pre><code>class Order
     def total
         44.50
     end
 end</code></pre>
-    <h2>Reusable Code</h2>
-    
-    <div class="gems">
-        <h3>Gems</h3>
-        <p>
-            Ruby gems are reusable libraries that add features to Ruby so you do not have to write everything from scratch.
-            You can install them using the <strong>gem</strong> command.
-        </p>
-        <!-- NO UNNECESSARY DETAIL
-        <p><b>Common gems include:</b></p>
-        <ul>
-            <li><strong>Rails</strong>: Web application framework.</li>
-            <li><strong>RSpec</strong>: Testing Ruby code.</li>
-            <li><strong>Devise</strong>: User authentication.</li>
-            <li><strong>Puma</strong>: A web server for Ruby and Rails applications.</li>
-        </ul>
-        <p><b>Common Rails gems include:</b></p>
-        <ul>
-            <li><strong>Active Record</strong>: Database interaction.</li>
-            <li><strong>Action Mailer</strong>: Sending emails.</li>
-            <li><strong>Active Job</strong>: Background job processing.</li>
-            <li><strong>Active Storage</strong>: File uploads.</li>
-        </ul>
-        -->
-        <h4>Rails</h4>
-        <p>
-            Rails is a web application framework written in Ruby. 
-            It follows the <a href="mvc.html">MVC (Model View Controller)</a> architecture and provides a structured way to build web applications quickly. 
-            It is distributed as a gem, but functions as a full framework composed of many smaller gems.
-        </p>
-        <p>You can install Rails using the <strong>gem install rails</strong> command.</p>
+        </div>
+        <div class="block">
+            <h3>Methods</h3>
+            <p>Methods are reusable blocks of code that perform a specific task. They help keep your code organised and DRY (Don't Repeat Yourself).  
+                Implicit return means the last evaluated expression is returned without needing the <code>return</code> keyword.
+                No parentheses are needed for method calls with no arguments.
+            </p>
+            <pre><code>def total(price, qty)
+    price * qty
+end</code></pre>
+        </div>
+        <div class="block">
+            <h3>Classes</h3>
+            <p>Classes are blueprints for creating objects. They encapsulate data and behaviour related to that data.</p>
+            <pre><code>class Order
+    def total
+        44.50
+    end
+end</code></pre>
+        </div>
+        <div class="block">
+            <h2>Reusable Code</h2>
+            <div class="gems">
+                <h3>Gems</h3>
+                <p>
+                    Ruby gems are reusable libraries that add features to Ruby so you do not have to write everything from scratch.
+                    You can install them using the <code>gem</code> command.
+                </p>
+                <!-- NO UNNECESSARY DETAIL
+                <p><b>Common gems include:</b></p>
+                <ul>
+                    <li><strong>Rails</strong>: Web application framework.</li>
+                    <li><strong>RSpec</strong>: Testing Ruby code.</li>
+                    <li><strong>Devise</strong>: User authentication.</li>
+                    <li><strong>Puma</strong>: A web server for Ruby and Rails applications.</li>
+                </ul>
+                <p><b>Common Rails gems include:</b></p>
+                <ul>
+                    <li><strong>Active Record</strong>: Database interaction.</li>
+                    <li><strong>Action Mailer</strong>: Sending emails.</li>
+                    <li><strong>Active Job</strong>: Background job processing.</li>
+                    <li><strong>Active Storage</strong>: File uploads.</li>
+                </ul>
+                -->
+        </div>
+        <div class="block">
+            <h4>Require / require_relative</h4>
+            <ul>
+                <li><code>require</code> loads installed libraries (standard library or gems)</li>
+                <li><code>require_relative</code> loads a local file relative to the current file's location</li>
+                <li>You usually put <code>require</code> lines at the top of a file</li>
+            </ul>
+            <pre><code>require "json"            # installed library
+require_relative "helpers"      # local file
+
+data = JSON.parse('{"name":"Joe"}')
+puts data["name"]
+</code></pre>
+        </div>
+        <div class="block">
+            <h4>Rails</h4>
+            <p>
+                Rails is a web application framework written in Ruby. 
+                It follows the <a href="mvc.html">MVC (Model View Controller)</a> architecture and provides a structured way to build web applications quickly. 
+                It is distributed as a gem, but functions as a full framework composed of many smaller gems.
+            </p>
+            <p>You can install Rails using the <code>gem install rails</code> command.</p>
+        </div>
     </div>
 </body>
 </html>
