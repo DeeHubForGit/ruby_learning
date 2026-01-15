@@ -92,6 +92,21 @@ age = 25
 puts "Adult" if (18..65).include?(age)</code></pre>
         </div>
         <div class="block">
+            <h3>Blocks (do..end, { })</h3>
+            <ul>
+                <li>Blocks are chunks of code passed to methods and executed later.</li>
+                <li>Use do..end for multi-line blocks.</li>
+                <li>Use { } for single-line blocks.</li>
+            </ul>
+            <pre><code><span class="c"># Multi-line block</span>
+[1, 2, 3].each do |n|
+    puts n
+end
+
+<span class="c"># Single-line block</span>
+[1, 2, 3].each { |n| puts n }</code></pre>
+        </div>
+        <div class="block">
             <h3>Classes</h3>
             <ul>
                 <li>Blueprints for creating objects</li>

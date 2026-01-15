@@ -23,27 +23,22 @@
         </div>
         <div class="block">
             <h2>Comments</h2>
-            <ul>
-                <li>Comments start with #</li>
-                <li>Used to explain code</li>
-                <li>Ignored when the program runs</li>
-            </ul>
             <pre><code><span class="c"># This is a comment</span>
 puts "This runs"
 <span class="c">
 # Ruby does not have a true multi-line comment.
 # Use # at the start of each line.
-# All lines starting with # are comments.
 </span></code></pre>
         </div>
         <div class="block">
             <h2>Variables</h2>
             <h3>Local Variables</h3>
             <ul>
-                <li>Start with a lowercase letter or underscore and an underscore between multiple words (snake_case).</li>
-                <li>Scope is limited to the block or method where the variable is defined.</li>
-                <li>Do <strong>not</strong> need to be declared before use.</li>
-                <li>Are created when first assigned a value.</li>
+                <li>Start with a lowercase letter or underscore, use snake_case.</li>
+                <li>Scope is limited to the block or method where it is defined.</li>
+                <li>Created when first assigned a value (no prior declaration needed).</li>
+                <li>Be descriptive, e.g. <code>total_monthly_sales</code> not <code>total</code></li>
+                <li>Avoid reserved words, e.g. if, elsif, else, end, class, def, etc.</li>
             </ul>
             <pre><code>count = 10
 _name = "Ruby"
@@ -52,39 +47,9 @@ total_price = count * 5</code></pre>
         <div class="block">
             <h3>Constants</h3>
             <ul>
-                <li>Start with an uppercase letter</li>
-                <li>Used for values that should not change</li>
-                <li>Ruby allows reassignment but shows a warning</li>
+                <li>Uppercase names for values intended not to change</li>
             </ul>
-            <pre><code>MAX_ITEMS = 10
-TAX_RATE = 0.1
-
-total = MAX_ITEMS * TAX_RATE</code></pre>
-        </div>
-        <div class="block">
-            <h3>Naming Style</h3>
-            <ul>
-                <li>Use snake_case for variable names.</li>
-                <li>Be descriptive, not abbreviated.</li>
-                <li>Avoid using reserved words as variable names.</li>
-            </ul>   
-        </div>
-        <div class="block">
-            <p><strong>Good Naming</strong></p>
-            <pre><code>user_name = "Joe"
-total_items = 3
-is_valid = true</code></pre>
-        </div>
-        <div class="block">
-            <p><strong>Bad Naming</strong></p>
-            <pre><code>x = 5
-tmp = "data"</code></pre>
-        </div>
-        <div class="block">
-            <h3>Dynamic Typing</h3>
-            <pre><code>name = "Joe"
-age = 30
-puts "#{name} is #{age}"</code></pre>
+            <pre><code>MAX_ITEMS = 10</code></pre>
         </div>
         <div class="block">
             <h3>Basic Data Types</h3>
@@ -103,22 +68,13 @@ puts "#{name} is #{age}"</code></pre>
 true
 false
 
-<span class="c"># Array: ordered list of items</span>
-[1, 2, 3]
-
-<span class="c"># Hash: key-value pairs</span>
-{ name: "Alice", age: 25 }
-
 <span class="c"># Nil: represents no value</span>
 nil</code></pre>
         </div>
         <div class="block">
             <h3>Arrays</h3>
             <ul>
-                <li>Ordered list of items</li>
-                <li>Indexed by position (starts at 0)</li>
-                <li>Can create, access, add and remove items</li>
-                <li><code><<</code> or <code>push</code> appends an item to the end</li>
+                <li>Ordered list of items, indexed by position (starts at 0)</li>
             </ul>
             <pre><code><span class="c"># Create an array</span>
 numbers = [1, 2, 3]
@@ -132,21 +88,16 @@ numbers << 4        <span class="c"># append using <<</span>
 numbers.push(5)     <span class="c"># append using method</span>
 
 <span class="c"># Remove elements</span>
-numbers.pop         <span class="c"># removes last item</span>
-
-<span class="c"># Resulting array</span>
-<span class="c"># [1, 2, 3, 4]</span></code></pre>
+numbers.pop         <span class="c"># removes last item</span></code></pre>
         </div>
         <div class="block">
-            <h3>Hashes</h3>
-            <ul>
-                <li>Key–value data structure</li>
-                <li>Keys are usually symbols or strings</li>
-                <li>Values accessed using keys</li>
-                <li>Can add and remove key–value pairs</li>
-            </ul>
-            <pre><code><span class="c"># Create a hash</span>
-<span class="c"># Keys can also be symbols (shown later)</span>
+        <h3>Hashes</h3>
+        <ul>
+            <li>Key–value data structure</li>
+            <li>Keys are usually symbols or strings</li>
+        </ul>
+
+        <pre><code><span class="c"># Create a hash</span>
 user = {
   "name" => "Alice",
   "age"  => 25
@@ -165,17 +116,10 @@ user.delete("age")</code></pre>
         <div class="block">
             <h3>Symbols (:symbol)</h3>
             <ul>
-                <li>Lightweight, immutable (cannot be changed) identifiers.</li>
-                <li>Used as <strong>names or labels</strong>, not data.</li>
-                <li>Common as <strong>hash keys</strong> and method arguments.</li>
+                <li>Lightweight identifiers used as labels</li>
+                <li>Common as hash keys and method arguments</li>
             </ul>
-            <pre><code><span class="c"># Symbol</span>
-:status
-:user_id
-:is_valid
-
-"name"    <span class="c"># String (can be changed)</span>
-:name     <span class="c"># Symbol (cannot be changed)</span></code></pre>
+            <pre><code>:status</code></pre>
         </div>
         <div class="block">
             <h2>Conditionals</h2>
@@ -218,8 +162,7 @@ end</code></pre>
         <div class="block">
             <h3>Comparison & Logical Operators</h3>
             <ul>
-                <li>Used to compare values</li>
-                <li>Used in conditionals and loops</li>
+                <li>Used to compare values and in loops</li>
                 <li>Return true or false</li>
             </ul>
             <pre><code>a = 10
@@ -234,21 +177,7 @@ a > 5 && b < 10   <span class="c"># true</span>
 a < 5 || b < 10   <span class="c"># true</span>
 !false            <span class="c"># true</span></code></pre>
         </div>
-        <div class="block">
-            <h3>Blocks (do..end, { })</h3>
-            <ul>
-                <li>Blocks are chunks of code passed to methods and executed later.</li>
-                <li>Use do..end for multi-line blocks.</li>
-                <li>Use { } for single-line blocks.</li>
-            </ul>
-            <pre><code><span class="c"># Multi-line block</span>
-[1, 2, 3].each do |n|
-    puts n
-end
-
-<span class="c"># Single-line block</span>
-[1, 2, 3].each { |n| puts n }</code></pre>
-        </div>
+        
         <div class="block">
             <h3>Loops/Iteration</h3>
             <ul>
@@ -269,7 +198,6 @@ end</code></pre>
             <ul>
                 <li>Used with arrays and collections</li>
                 <li>Return new values, do not modify originals</li>
-                <li>Very common in Ruby and Rails</li>
             </ul>
             <pre><code>numbers = [1, 2, 3, 4, 5]
 
@@ -282,7 +210,6 @@ numbers.find { |n| n > 3 }       <span class="c"># 4</span></code></pre>
             <h3>Methods</h3>
             <ul>
                 <li>Reusable blocks of code that perform a task</li>
-                <li>Used to organise code and reduce repetition (DRY)</li>
                 <li>Can take arguments (parameters)</li>
                 <li>The last evaluated expression is returned automatically (implicit return)</li>
                 <li><code>return</code> is optional but exits the method immediately</li>
