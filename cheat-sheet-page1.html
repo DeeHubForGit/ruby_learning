@@ -34,9 +34,9 @@ puts "This runs"
             <h2>Variables</h2>
             <h3>Local Variables</h3>
             <ul>
-                <li>Start with a lowercase letter or underscore, use snake_case.</li>
-                <li>Scope is limited to the block or method where it is defined.</li>
-                <li>Created when first assigned a value (no prior declaration needed).</li>
+                <li>Use lowercase letters and underscores (snake case).</li>
+                <li>Scope limited to the block or method where defined.</li>
+                <li>Created on first assignment (no declaration needed).</li>
                 <li>Be descriptive, e.g. <code>total_monthly_sales</code> not <code>total</code></li>
                 <li>Avoid reserved words, e.g. if, elsif, else, end, class, def, etc.</li>
             </ul>
@@ -52,7 +52,7 @@ total_price = count * 5</code></pre>
             <pre><code>MAX_ITEMS = 10</code></pre>
         </div>
         <div class="block">
-            <h3>Basic Data Types</h3>
+            <h2>Basic Data Types</h2>
             <pre><code><span class="c"># String: text data</span>
 "Hello, World!"
 
@@ -72,9 +72,10 @@ false
 nil</code></pre>
         </div>
         <div class="block">
-            <h3>Arrays</h3>
+            <h2>Arrays</h2>
             <ul>
-                <li>Ordered list of items, indexed by position (starts at 0)</li>
+                <li>Ordered list of items</li>
+                <li>Indexed by position (starts at 0)</li>
             </ul>
             <pre><code><span class="c"># Create an array</span>
 numbers = [1, 2, 3]
@@ -91,7 +92,7 @@ numbers.push(5)     <span class="c"># append using method</span>
 numbers.pop         <span class="c"># removes last item</span></code></pre>
         </div>
         <div class="block">
-        <h3>Hashes</h3>
+        <h2>Hashes</h2>
         <ul>
             <li>Key–value data structure</li>
             <li>Keys are usually symbols or strings</li>
@@ -114,7 +115,7 @@ user["email"] = "alice@example.com"
 user.delete("age")</code></pre>
         </div>
         <div class="block">
-            <h3>Symbols (:symbol)</h3>
+            <h2>Symbols (:symbol)</h2>
             <ul>
                 <li>Lightweight identifiers used as labels</li>
                 <li>Common as hash keys and method arguments</li>
@@ -160,7 +161,7 @@ else
 end</code></pre>
         </div>
         <div class="block">
-            <h3>Comparison & Logical Operators</h3>
+            <h2>Comparison & Logical Operators</h2>
             <ul>
                 <li>Used to compare values and in loops</li>
                 <li>Return true or false</li>
@@ -179,7 +180,7 @@ a < 5 || b < 10   <span class="c"># true</span>
         </div>
         
         <div class="block">
-            <h3>Loops/Iteration</h3>
+            <h2>Loops/Iteration</h2>
             <ul>
                 <li><strong>Each</strong>: Iterates over an array:</li>
             </ul>
@@ -193,8 +194,8 @@ end</code></pre>
     puts "Iteration #{i + 1}"
 end</code></pre>
         </div>
-        <div class="block">
-            <h3>Common Enumerable Methods</h3>
+        <div class="block" id="print-enumerable">
+            <h2>Common Enumerable Methods</h2>
             <ul>
                 <li>Used with arrays and collections</li>
                 <li>Return new values, do not modify originals</li>
@@ -206,14 +207,14 @@ numbers.select { |n| n.even? }   <span class="c"># [2, 4]</span>
 numbers.reject { |n| n < 3 }     <span class="c"># [3, 4, 5]</span>
 numbers.find { |n| n > 3 }       <span class="c"># 4</span></code></pre>
         </div>
-        <div class="block">
-            <h3>Methods</h3>
+        <div class="block" id="print-methods">
+            <h2>Methods</h2>
             <ul>
                 <li>Reusable blocks of code that perform a task</li>
                 <li>Can take arguments (parameters)</li>
-                <li>The last evaluated expression is returned automatically (implicit return)</li>
-                <li><code>return</code> is optional but exits the method immediately</li>
-                <li>Parentheses are optional when calling methods with no arguments</li>
+                <li>Last expression is returned automatically</li>
+                <li><code>return</code> is optional and exits immediately</li>
+                <li>Parentheses optional with no arguments</li>
             </ul>
             <pre><code>def total(price, qty)
     price * qty
