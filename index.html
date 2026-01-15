@@ -30,6 +30,18 @@ _name = "Ruby"
 total_price = count * 5</code></pre>
         </div>
         <div class="block">
+            <h3>Constants</h3>
+            <ul>
+                <li>Start with an uppercase letter</li>
+                <li>Used for values that should not change</li>
+                <li>Ruby allows reassignment but shows a warning</li>
+            </ul>   
+        </div>
+        <pre><code>MAX_ITEMS = 10
+TAX_RATE = 0.1
+
+total = MAX_ITEMS * TAX_RATE</code></pre>
+        <div class="block">
             <h3>Naming Style</h3>
             <ul>
                 <li>Use snake_case for variable names.</li>
@@ -256,6 +268,37 @@ puts "Adult" if (18..65).include?(age)</code></pre>
     end
 end</code></pre>
         </div>
+
+<div class="block">
+            <h3>Modules (namespacing & mixins)</h3>
+            <p><strong>Modules</strong> are used to group code and share behaviour.</p>
+            <ul>
+                <li>Used for <strong>namespacing</strong> (organising code)</li>
+                <li>Used as <strong>mixins</strong> (shared methods)</li>
+                <li>Cannot be instantiated</li>
+            </ul>
+            <pre><code># Namespacing
+module Payments
+  TAX_RATE = 0.1
+end
+
+Payments::TAX_RATE
+
+# Mixin
+module Printable
+  def print_name
+    puts name
+  end
+end
+
+class User
+  include Printable
+  attr_reader :name
+
+  def initialize(name)
+    @name = name
+  end
+end</code></pre>
         <div class="block">
             <h3>Methods</h3>
             <p>Methods are reusable blocks of code that perform a specific task. They help keep your code organised and DRY (Don't Repeat Yourself).  
