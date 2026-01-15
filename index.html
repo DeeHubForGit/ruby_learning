@@ -83,28 +83,28 @@ puts "#{name} is #{age}"</code></pre>
         </div>
         <div class="block">
             <h3>Basic Data Types</h3>
-            <pre><code># String: text data
+            <pre><code><span class="c"># String: text data</span>
 "Hello, World!"
 
-# Integer: whole numbers
+<span class="c"># Integer: whole numbers</span>
 42
 -7
 
-# Float: decimal numbers
+<span class="c"># Float: decimal numbers</span>
 3.14
 -0.001
 
-# Boolean: true or false
+<span class="c"># Boolean: true or false</span>
 true
 false
 
-# Array: ordered list of items
+<span class="c"># Array: ordered list of items</span>
 [1, 2, 3]
 
-# Hash: key-value pairs
+<span class="c"># Hash: key-value pairs</span>
 { name: "Alice", age: 25 }
 
-# Nil: represents no value
+<span class="c"># Nil: represents no value</span>
 nilZ</code></pre>
         </div>
         <div class="block">
@@ -115,22 +115,22 @@ nilZ</code></pre>
                 <li>Can create, access, add and remove items</li>
                 <li><code><<</code> or <code>push</code> appends an item to the end</li>
             </ul>
-            <pre><code># Create an array
+            <pre><code><span class="c"># Create an array</span>
 numbers = [1, 2, 3]
 
-# Access elements (index starts at 0)
-numbers[0]   # 1
-numbers[1]   # 2
+<span class="c"># Access elements (index starts at 0)</span>
+numbers[0]   <span class="c"># 1</span>
+numbers[1]   <span class="c"># 2</span>
 
-# Add elements
-numbers << 4        # append using <<
-numbers.push(5)     # append using method
+<span class="c"># Add elements</span>
+numbers << 4        <span class="c"># append using <<</span>
+numbers.push(5)     <span class="c"># append using method</span>
 
-# Remove elements
-numbers.pop         # removes last item
+<span class="c"># Remove elements</span>
+numbers.pop         <span class="c"># removes last item</span>
 
-# Resulting array
-# [1, 2, 3, 4]</code></pre>
+<span class="c"># Resulting array</span>
+<span class="c"># [1, 2, 3, 4]</span></code></pre>
         </div>
         <div class="block">
             <h3>Hashes</h3>
@@ -148,26 +148,26 @@ numbers.pop         # removes last item
                 <li>Used as <strong>names or labels</strong>, not data.</li>
                 <li>Common as <strong>hash keys</strong> and method arguments.</li>
             </ul>
-            <pre><code># Symbol
+            <pre><code><span class="c"># Symbol</span>
 :status
 :user_id
 :is_valid
 
-"name"    # String (can be changed)
-:name     # Symbol (cannot be changed)</code></pre>
+"name"    <span class="c"># String (can be changed)</span>
+:name     <span class="c"># Symbol (cannot be changed)</span></code></pre>
         </div>
         <div class="block">
             <h2>Conditionals</h2>
             <h3>if, elsif, else</h3>
-            <pre><code># Basic if statement
+            <pre><code><span class="c"># Basic if statement</span>
 if total > 40
     puts "Large order"
 end
 
-# Ruby-style one line
+<span class="c"># Ruby-style one line</span>
 puts "Large order" if total > 40
 
-# Using elsif and else
+<span class="c"># Using elsif and else</span>
 if total > 100
   puts "Free shipping"
 elsif total > 40
@@ -183,7 +183,7 @@ end</code></pre>
                 <li>Cleaner than long <code>if</code> / <code>elsif</code> chains</li>
                 <li>Uses <code>when</code> instead of <code>elsif</code></li>
             </ul>
-            <pre><code>status = :paid    # value being checked
+            <pre><code>status = :paid    <span class="c"># value being checked</span>
 
 case status
 when :paid
@@ -211,7 +211,7 @@ ensure
   puts "Done"
 end
 
-# Rescue shorthand (common)
+<span class="c"># Rescue shorthand (common)</span>
 result = 10 / value rescue nil</code></pre>
         </div>
 
@@ -222,12 +222,12 @@ result = 10 / value rescue nil</code></pre>
                 <li>Everything else is treated as true</li>
                 <li>Commonly used in <code>if</code>, <code>elsif</code>, <code>unless</code></li>
             </ul>
-            <pre><code>false   # false
-nil     # false
+            <pre><code>false   <span class="c"># false</span>
+nil     <span class="c"># false</span>
 
-0       # true
-""      # true (empty string)
-[]      # true (empty array)
+0       <span class="c"># true</span>
+""      <span class="c"># true (empty string)</span>
+[]      <span class="c"># true (empty array)</span>
 
 if value
   puts "Runs unless value is false or nil"
@@ -243,13 +243,13 @@ end</code></pre>
             <pre><code>user = nil
 
 user.name
-# NoMethodError
+<span class="c"># NoMethodError</span>
 
 user&.name
-# nil
+<span class="c"># nil</span>
 
 order&.customer&.email
-# Safe even if order or customer is nil</code></pre>
+<span class="c"># Safe even if order or customer is nil</span></code></pre>
         </div>
 
         <div class="block">
@@ -259,12 +259,12 @@ order&.customer&.email
                 <li>Use do..end for multi-line blocks.</li>
                 <li>Use { } for single-line blocks.</li>
             </ul>
-            <pre><code># Multi-line block
+            <pre><code><span class="c"># Multi-line block</span>
 [1, 2, 3].each do |n|
     puts n
 end
 
-# Single-line block
+<span class="c"># Single-line block</span>
 [1, 2, 3].each { |n| puts n }</code></pre>
         </div>
         <div class="block">
@@ -290,17 +290,17 @@ end</code></pre>
                 <li><code>..</code> includes the end value</li>
                 <li><code>...</code> excludes the end value</li>
             </ul>
-            <pre><code># Inclusive range
+            <pre><code><span class="c"># Inclusive range</span>
 (1..5).each do |n|
   puts n
 end
 
-# Exclusive range
+<span class="c"># Exclusive range</span>
 (1...5).each do |n|
   puts n
 end
 
-# Range in condition
+<span class="c"># Range in condition</span>
 age = 25
 puts "Adult" if (18..65).include?(age)</code></pre>
         </div>
@@ -313,14 +313,14 @@ puts "Adult" if (18..65).include?(age)</code></pre>
                 <li>Used as <strong>mixins</strong> (shared methods)</li>
                 <li>Cannot be instantiated</li>
             </ul>
-            <pre><code># Namespacing
+            <pre><code><span class="c"># Namespacing</span>
 module Payments
   TAX_RATE = 0.1
 end
 
 Payments::TAX_RATE
 
-# Mixin
+<span class="c"># Mixin</span>
 module Printable
   def print_name
     puts name
@@ -358,7 +358,7 @@ end</code></pre>
   price * qty
 end
 
-result = total(10, 3)   # 30</code></pre>
+result = total(10, 3)   <span class="c"># 30</span></code></pre>
         </div>
         <div class="block">
             <h3>Classes</h3>
@@ -381,9 +381,9 @@ end</code></pre>
                 <li>Used inside classes</li>
             </ul>
             <pre><code>class User
-  attr_reader :name        # getter only
-  attr_writer :email       # setter only
-  attr_accessor :age       # getter and setter
+  attr_reader :name        <span class="c"># getter only</span>
+  attr_writer :email       <span class="c"># setter only</span>
+  attr_accessor :age       <span class="c"># getter and setter</span>
 
   def initialize(name, age)
     @name = name
@@ -419,10 +419,10 @@ end</code></pre>
             </ul>
             <pre><code>numbers = [1, 2, 3, 4, 5]
 
-numbers.map { |n| n * 2 }        # [2, 4, 6, 8, 10]
-numbers.select { |n| n.even? }   # [2, 4]
-numbers.reject { |n| n < 3 }     # [3, 4, 5]
-numbers.find { |n| n > 3 }       # 4</code></pre>
+numbers.map { |n| n * 2 }        <span class="c"># [2, 4, 6, 8, 10]</span>
+numbers.select { |n| n.even? }   <span class="c"># [2, 4]</span>
+numbers.reject { |n| n < 3 }     <span class="c"># [3, 4, 5]</span>
+numbers.find { |n| n > 3 }       <span class="c"># 4</span></code></pre>
         </div>
         <div class="block">
             <h3>Comparison & Logical Operators</h3>
@@ -434,14 +434,14 @@ numbers.find { |n| n > 3 }       # 4</code></pre>
             <pre><code>a = 10
 b = 5
 
-a == b     # false
-a != b     # true
-a > b      # true
-a <= b     # false
+a == b     <span class="c"># false</span>
+a != b     <span class="c"># true</span>
+a > b      <span class="c"># true</span>
+a <= b     <span class="c"># false</span>
 
-a > 5 && b < 10   # true
-a < 5 || b < 10   # true
-!false            # true</code></pre>
+a > 5 && b < 10   <span class="c"># true</span>
+a < 5 || b < 10   <span class="c"># true</span>
+!false            <span class="c"># true</span></code></pre>
         </div>
         <div class="block">
             <h2>Reusable Code</h2>
@@ -476,8 +476,8 @@ a < 5 || b < 10   # true
                 <li><code>require_relative</code> loads a local file relative to the current file's location</li>
                 <li>You usually put <code>require</code> lines at the top of a file</li>
             </ul>
-            <pre><code>require "json"            # installed library
-require_relative "helpers"      # local file
+            <pre><code>require "json"            <span class="c"># installed library</span>
+require_relative "helpers"      <span class="c"># local file</span>
 
 data = JSON.parse('{"name":"Joe"}')
 puts data["name"]
