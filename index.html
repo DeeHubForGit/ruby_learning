@@ -12,9 +12,9 @@
         <div class="block">
             <h2>Output</h2>
             <h3>puts</h3>
-            <pre>puts "This will print the text to the screen then move to the next line"</pre>
+            <pre><code>puts "This will print the text to the screen then move to the next line"</code></pre>
             <h3>print</h3>
-            <pre>print "This will print the text to the screen without moving to the next line"</pre>
+            <pre><code>print "This will print the text to the screen without moving to the next line"</code></pre>
         </div>
         <div class="block">
             <h2>Variables</h2>
@@ -35,12 +35,12 @@ total_price = count * 5</code></pre>
                 <li>Start with an uppercase letter</li>
                 <li>Used for values that should not change</li>
                 <li>Ruby allows reassignment but shows a warning</li>
-            </ul>   
-        </div>
-        <pre><code>MAX_ITEMS = 10
+            </ul>
+            <pre><code>MAX_ITEMS = 10
 TAX_RATE = 0.1
 
 total = MAX_ITEMS * TAX_RATE</code></pre>
+        </div>
         <div class="block">
             <h3>Naming Style</h3>
             <ul>
@@ -99,7 +99,7 @@ puts "#{name} is #{age}"</code></pre>
         <div class="block">
             <h3>Symbols (:symbol)</h3>
             <ul>
-                <li>Lightweight, immutable (cannot be changed) identifiers.</strong></li>
+                <li>Lightweight, immutable (cannot be changed) identifiers.</li>
                 <li>Used as <strong>names or labels</strong>, not data.</li>
                 <li>Common as <strong>hash keys</strong> and method arguments.</li>
             </ul>
@@ -188,7 +188,7 @@ if value
   puts "Runs unless value is false or nil"
 end</code></pre>
         </div>
-<div class="block">
+        <div class="block">
             <h3>Safe Navigation (&.)</h3>
             <ul>
                 <li>Used to safely call methods on something that might be <code>nil</code></li>
@@ -259,20 +259,11 @@ end
 age = 25
 puts "Adult" if (18..65).include?(age)</code></pre>
         </div>
-        <div class="block">
-            <h3>Classes</h3>
-            <p>Classes are blueprints for creating objects. They encapsulate data and behaviour related to that data.</p>
-            <pre><code>class Order
-    def total
-        44.50
-    end
-end</code></pre>
-        </div>
 
-<div class="block">
+        <div class="block">
             <h3>Modules (namespacing & mixins)</h3>
-            <p><strong>Modules</strong> are used to group code and share behaviour.</p>
             <ul>
+                <li>Group related code and share behaviour</li>
                 <li>Used for <strong>namespacing</strong> (organising code)</li>
                 <li>Used as <strong>mixins</strong> (shared methods)</li>
                 <li>Cannot be instantiated</li>
@@ -299,6 +290,8 @@ class User
     @name = name
   end
 end</code></pre>
+        </div>
+
         <div class="block">
             <h3>Methods</h3>
             <p>Methods are reusable blocks of code that perform a specific task. They help keep your code organised and DRY (Don't Repeat Yourself).  
@@ -308,6 +301,89 @@ end</code></pre>
             <pre><code>def total(price, qty)
     price * qty
 end</code></pre>
+        </div>
+        <div class="block">
+            <h3>Accessors (attr_reader, attr_writer, attr_accessor)</h3>
+            <ul>
+                <li>Create getter and/or setter methods automatically</li>
+                <li>Reduce repetitive code in classes</li>
+                <li>Used inside classes</li>
+            </ul>
+            <pre><code>class User
+  attr_reader :name        # getter only
+  attr_writer :email       # setter only
+  attr_accessor :age       # getter and setter
+
+  def initialize(name, age)
+    @name = name
+    @age = age
+  end
+end</code></pre>
+        </div>
+        <div class="block">
+            <h3>Method Return Values</h3>
+            <ul>
+                <li>Methods always return a value</li>
+                <li>The last evaluated expression is returned</li>
+                <li>return can be used explicitly (optional)</li>
+            </ul>
+            <pre><code>def total(price, qty)
+  price * qty
+end
+
+result = total(10, 3)   # 30</code></pre>
+        </div>
+        <div class="block">
+            <h3>Implicit Return</h3>
+            <ul>
+                <li>Ruby returns the last expression automatically</li>
+                <li>return keyword is usually not needed</li>
+                <li>Common Ruby style</li>
+            </ul>
+            <pre><code>def double(x)
+  x * 2
+end
+
+def status(total)
+  if total > 100
+    "Free shipping"
+  else
+    "Shipping applies"
+  end
+end</code></pre>
+        </div>
+        <div class="block">
+            <h3>Common Enumerable Methods</h3>
+            <ul>
+                <li>Used with arrays and collections</li>
+                <li>Return new values, do not modify originals</li>
+                <li>Very common in Ruby and Rails</li>
+            </ul>
+            <pre><code>numbers = [1, 2, 3, 4, 5]
+
+numbers.map { |n| n * 2 }        # [2, 4, 6, 8, 10]
+numbers.select { |n| n.even? }   # [2, 4]
+numbers.reject { |n| n < 3 }     # [3, 4, 5]
+numbers.find { |n| n > 3 }       # 4</code></pre>
+        </div>
+        <div class="block">
+            <h3>Comparison & Logical Operators</h3>
+            <ul>
+                <li>Used to compare values</li>
+                <li>Used in conditionals and loops</li>
+                <li>Return true or false</li>
+            </ul>
+            <pre><code>a = 10
+b = 5
+
+a == b     # false
+a != b     # true
+a > b      # true
+a <= b     # false
+
+a > 5 && b < 10   # true
+a < 5 || b < 10   # true
+!false            # true</code></pre>
         </div>
         <div class="block">
             <h3>Classes</h3>
@@ -342,6 +418,7 @@ end</code></pre>
                     <li><strong>Active Storage</strong>: File uploads.</li>
                 </ul>
                 -->
+            </div>
         </div>
         <div class="block">
             <h4>Require / require_relative</h4>
