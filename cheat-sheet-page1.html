@@ -7,12 +7,10 @@
     <link rel="stylesheet" href="assets/theme.css">
 </head>
 <body>
-    <h1>Ruby Cheat Sheet - Page 1</h1>
-    <p>
-        <a href="index.html">Home</a> |
-        <a href="cheat-sheet-page1.html">Page 1</a> |
-        <a href="cheat-sheet-page2.html">Page 2</a>
-    </p>
+    <div class="topbar">
+        <h1>Ruby Cheat Sheet - Page 1</h1>
+        <div class="nav"><a href="index.html">Home</a> | <a href="cheat-sheet-page1.html">Page 1</a> | <a href="cheat-sheet-page2.html">Page 2</a></div>
+    </div>
     <div class="cheatsheet">
         <div class="block">
             <h2>Output</h2>
@@ -53,23 +51,27 @@ total_price = count * 5</code></pre>
         </div>
         <div class="block">
             <h2>Basic Data Types</h2>
-            <pre><code><span class="c"># String: text data</span>
-"Hello, World!"
-
-<span class="c"># Integer: whole numbers</span>
-42
--7
-
-<span class="c"># Float: decimal numbers</span>
-3.14
--0.001
-
-<span class="c"># Boolean: true or false</span>
-true
-false
-
-<span class="c"># Nil: represents no value</span>
-nil</code></pre>
+            <h3>String (text data)</h3>
+            <pre><code>"Hello, World!"</code></pre>
+        </div>
+        <div class="block">
+            <h3>Integer (whole numbers)</h3>
+            <pre><code>42
+-7</code></pre>
+        </div>
+        <div class="block">
+            <h3>Float (decimal numbers)</h3>
+            <pre><code>3.14
+-0.001</code></pre>
+        </div>
+        <div class="block">
+            <h3>Boolean (true or false)</h3>
+            <pre><code>true
+false</code></pre>
+        </div>
+        <div class="block">
+            <h3>Nil (represents no value)</h3>
+            <pre><code>nil</code></pre>
         </div>
         <div class="block">
             <h2>Arrays</h2>
@@ -104,9 +106,8 @@ user = {
   "age"  => 25
 }
 
-<span class="c"># Access values</span>
+<span class="c"># Access value</span>
 user["name"]   <span class="c"># "Alice"</span>
-user["age"]    <span class="c"># 25</span>
 
 <span class="c"># Add a key-value pair</span>
 user["email"] = "alice@example.com"
@@ -188,7 +189,7 @@ a < 5 || b < 10   <span class="c"># true</span>
     puts order[:id]
 end</code></pre>
             <ul>
-                <li><strong>Times</strong>: Repeats a block a specified number of times:</li>
+                <li class="times-item"><strong>Times:</strong> Repeats a block a specified number of times</li>
             </ul>
             <pre><code>5.times do |i|
     puts "Iteration #{i + 1}"

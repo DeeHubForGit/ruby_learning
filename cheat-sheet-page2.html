@@ -7,12 +7,10 @@
     <link rel="stylesheet" href="assets/theme.css">
 </head>
 <body>
-    <h1>Ruby Cheat Sheet - Page 2</h1>
-    <p>
-        <a href="index.html">Home</a> |
-        <a href="cheat-sheet-page1.html">Page 1</a> |
-        <a href="cheat-sheet-page2.html">Page 2</a>
-    </p>
+    <div class="topbar">
+        <h1>Ruby Cheat Sheet - Page 2</h1>
+        <div class="nav"><a href="index.html">Home</a> | <a href="cheat-sheet-page1.html">Page 1</a> | <a href="cheat-sheet-page2.html">Page 2</a></div>
+    </div>
     <div class="cheatsheet">
         <div class="block">
             <h3>Truthiness (nil vs false) (Ruby-specific)</h3>
@@ -35,7 +33,7 @@ end</code></pre>
         <div class="block">
             <h3>Safe Navigation (&.)</h3>
             <ul>
-                <li>Used to safely call methods on something that might be <code>nil</code></li>
+                <li>Used to safely call methods on values that might be <code>nil</code></li>
                 <li>Prevents <code>NoMethodError</code></li>
                 <li>Returns <code>nil</code> if the object is <code>nil</code></li>
             </ul>
@@ -66,7 +64,7 @@ ensure
   puts "Done"
 end
 
-<span class="c"># Rescue shorthand (common)</span>
+<span class="c"># Rescue shorthand (common, use sparingly)</span>
 result = 10 / value rescue nil</code></pre>
         </div>
         <div class="block">
@@ -217,7 +215,7 @@ puts data["name"]
                 <li>Web application framework written in Ruby</li>
                 <li>Follows the <a href="mvc.html">MVC (Model View Controller)</a> pattern</li>
                 <li>Provides structure for building web apps quickly</li>
-                <li>Distributed as a gem but made up of many smaller gems</li>
+                <li>Distributed as a gem but composed of many smaller gems</li>
             </ul>
             <pre><code>gem install rails</code></pre>
         </div>

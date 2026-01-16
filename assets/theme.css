@@ -151,8 +151,8 @@ pre code {
     margin: 6mm;
   }
 
-  /* Hide the nav links line in print */
-  body > p {
+  /* Hide navigation in print */
+  .nav {
     display: none !important;
   }
 
@@ -218,5 +218,94 @@ pre code {
   code {
     font-size: 7.5pt !important;
     line-height: 1.05 !important;
+  }
+}
+
+/* ===== Compact on-screen layout (does not affect printing) ===== */
+@media screen {
+  /* Overall text slightly smaller */
+  body {
+    font-size: 14px;
+    line-height: 1.22;
+  }
+
+  /* Headings smaller */
+  h1 {
+    font-size: 30px;
+    margin: 0 0 10px 0;
+  }
+
+  /* Compact header: title + nav beside it (one line) */
+  .topbar {
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-start;
+    gap: 10px;
+    margin: 6px 0 8px 0;
+  }
+
+  .topbar h1 {
+    font-size: 24px;
+    margin: 0;
+    line-height: 1.05;
+  }
+
+  .nav {
+    white-space: nowrap;
+    font-size: 13px;
+    margin: 0;
+  }
+
+  .nav a {
+    margin: 0;
+  }
+
+  h2 {
+    font-size: 20px;
+    margin: 0 0 6px 0;
+  }
+
+  h3 {
+    font-size: 16px;
+    margin: 0 0 6px 0;
+  }
+
+  /* Bullets smaller + tighter */
+  ul {
+    margin: 0 0 8px 0;
+    padding-left: 18px;
+  }
+
+  li {
+    font-size: 13px;
+    margin: 0 0 3px 0;
+    line-height: 1.18;
+  }
+
+  /* Gap before the Times bullet, without forcing wrapping */
+  .times-item {
+    margin-top: 0.4rem;
+  }
+  
+  /* Tighter block spacing */
+  .block {
+    margin-bottom: 12px;
+  }
+
+  /* Tighter code blocks, but keep code font larger */
+  pre {
+    margin: 6px 0 0 0;
+    padding: 8px 10px;
+  }
+
+  pre,
+  code {
+    font-size: 14px;
+    line-height: 1.25;
+  }
+
+  /* Optional: slightly reduce space between columns if you use grid gap */
+  .cheatsheet {
+    gap: 14px;
   }
 }
