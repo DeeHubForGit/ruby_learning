@@ -208,6 +208,14 @@ pre code {
     margin: 0 0 2mm 0 !important;
   }
 
+  .print-title {
+    margin-top: 2mm !important;
+  }
+
+  .times-item {
+    margin-top: 2mm !important;
+  }
+
   ul {
     margin: 0 0 2mm 0 !important;
     padding-left: 14pt !important;
@@ -262,6 +270,8 @@ pre code {
     justify-content: flex-start;
     gap: 10px;
     margin: 6px 0 8px 0;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
   .topbar h1 {
@@ -290,6 +300,11 @@ pre code {
     font-size: 13px;
     margin: 0 0 3px 0;
     line-height: 1.18;
+  }
+
+  /* Add space before the print section */
+  .print-title {
+    margin-top: 10px;
   }
 
   /* Gap before the Times bullet, without forcing wrapping */
