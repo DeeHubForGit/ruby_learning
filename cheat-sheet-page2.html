@@ -58,12 +58,7 @@ count = 0
 until count == 3
   puts count
   count += 1
-end
-
-<span class="c"># begin / end while (runs at least once)</span>
-begin
-  puts "Runs once"
-end while false</code></pre>
+end</code></pre>
         </div>
         <div class="block">
             <h2>Truthiness (nil vs false) (Ruby-specific)</h2>
@@ -71,6 +66,7 @@ end while false</code></pre>
                 <li>Only false and nil are treated as false</li>
                 <li>Everything else is treated as true</li>
                 <li>Commonly used in <code>if</code>, <code>elsif</code>, <code>unless</code> (opposite of if)</li>
+                <li>Simplifies checking for existence (nil or false)</li>
             </ul>
             <pre><code>false   <span class="c"># false</span>
 nil     <span class="c"># false</span>
@@ -79,11 +75,15 @@ nil     <span class="c"># false</span>
 ""      <span class="c"># true (empty string)</span>
 []      <span class="c"># true (empty array)</span>
 
-if value
-  puts "Runs unless value is false or nil"
+<span class="c"># Instead of this</span>
+if customer != nil
+  puts "Customer exists"
 end
 
-puts "Runs" unless value</code></pre>
+<span class="c"># Do this</span>
+if customer
+  puts "Customer exists"
+end</code></pre>
         </div>
         <div class="block">
             <h2>Safe Navigation (&.)</h2>
@@ -93,15 +93,11 @@ puts "Runs" unless value</code></pre>
                 <li>Returns <code>nil</code> if the object is <code>nil</code></li>
             </ul>
             <pre><code>user = nil
+user.name   <span class="c"># NoMethodError</span>
+user&.name  <span class="c"># nil</span>
 
-user.name
-<span class="c"># NoMethodError</span>
-
-user&.name
-<span class="c"># nil</span>
-
-order&.customer&.email
-<span class="c"># Safe even if order or customer is nil</span></code></pre>
+<span class="c"># Safe even if order or customer is nil</span>
+order&.customer&.email</code></pre>
         </div>
         <div class="block">
             <h2>Ranges (.. and ...)</h2>
