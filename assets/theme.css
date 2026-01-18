@@ -29,17 +29,18 @@ a:focus-visible {
 
 /* Inline code (if you use <code> inside sentences) */
 code {
-  font-family: Consolas, Monaco, "Courier New", monospace;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 /* Code blocks */
 pre {
-  font-family: Consolas, Monaco, "Courier New", monospace;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   margin: 0 0 0.5rem 0;        /* space after the block only */
   padding: 0.5rem;
-  background: #eef2f6; 
+  background: #f5f7fb;
   border-radius: 6px;
-  border: 1px solid #e2e8f0;
+  border: 1px solid #d9e2ef;
+  color: #0b1220;
   display: inline-block;        /* shrink background to content width */
   max-width: 100%;
   box-sizing: border-box;
@@ -53,7 +54,7 @@ pre code {
   margin: 0;
   padding: 0;
   background: none;
-  font-size: 0.9em;
+  font-size: 0.95em;
 }
 
 pre code span.c {
@@ -485,6 +486,14 @@ pre code {
   }
 }
 
+/* Larger screens: add a little breathing room before headings */
+@media screen and (min-width: 481px) {
+  body.cheat-page .block {
+    padding-top: 6px;
+    margin-bottom: 6px;
+  }
+}
+
 /* Mobile readability tweaks (small screens) */
 @media screen and (max-width: 480px) {
   body.cheat-page {
@@ -518,16 +527,18 @@ pre code {
   }
 
   body.cheat-page pre {
-    color: #0f172a;
-    background: #e9eff6;
+    color: #0b1220;
+    background: #f4f7fb;
+    border-color: #d9e2ef;
   }
 
   body.cheat-page pre code {
-    color: #0f172a;
-    font-weight: 500;
+    color: #0b1220;
+    font-weight: 600;
+    text-shadow: 0 0 0.35px currentColor;
   }
 
   body.cheat-page pre code span.c {
-    color: #6b5a5c;
+    color: #475569;
   }
 }
