@@ -346,7 +346,7 @@ pre code {
   }
 
   body.cheat-page li {
-    font-size: 12.5px;
+    font-size: 13.5px;
     margin: 0 0 2px 0;
   }
 
@@ -516,29 +516,30 @@ pre code {
   }
 
   body.cheat-page li {
-    font-size: 14px;
+    font-size: 15px;
     line-height: 1.22;
   }
 
   body.cheat-page pre,
   body.cheat-page code {
-    font-size: 15px;
-    line-height: 1.25;
+    font-size: 16px;
+    line-height: 1.3;
   }
 
   body.cheat-page pre {
-    color: #0b1220;
-    background: #f4f7fb;
-    border-color: #d9e2ef;
+    color: #0f172a;
+    background: #f8fafc;
+    border-color: #cbd5e1;
   }
 
   body.cheat-page pre code {
-    color: #0b1220;
-    font-weight: 600;
-    text-shadow: 0 0 0.35px currentColor;
+    color: #0f172a;
+    font-weight: 700;
+    letter-spacing: 0.1px;
+    text-shadow: 0 0 0.25px currentColor;
   }
 
   body.cheat-page pre code span.c {
-    color: #475569;
+    color: #334155;
   }
 }
