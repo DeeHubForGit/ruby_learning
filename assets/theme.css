@@ -484,3 +484,50 @@ pre code {
     -webkit-column-break-before: always;
   }
 }
+
+/* Mobile readability tweaks (small screens) */
+@media screen and (max-width: 480px) {
+  body.cheat-page {
+    font-size: 15px;
+    line-height: 1.26;
+  }
+
+  /* Add breathing room before headings by increasing section spacing */
+  body.cheat-page .block {
+    margin-bottom: 14px;
+  }
+
+  /* Keep tightly related blocks (Arrays + Enumerable) closer together */
+  body.cheat-page .print-keep-together .block {
+    margin-bottom: 10px;
+  }
+
+  body.cheat-page .print-keep-together .block:last-child {
+    margin-bottom: 14px;
+  }
+
+  body.cheat-page li {
+    font-size: 14px;
+    line-height: 1.22;
+  }
+
+  body.cheat-page pre,
+  body.cheat-page code {
+    font-size: 15px;
+    line-height: 1.25;
+  }
+
+  body.cheat-page pre {
+    color: #0f172a;
+    background: #e9eff6;
+  }
+
+  body.cheat-page pre code {
+    color: #0f172a;
+    font-weight: 500;
+  }
+
+  body.cheat-page pre code span.c {
+    color: #6b5a5c;
+  }
+}
