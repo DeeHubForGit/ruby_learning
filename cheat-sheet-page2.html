@@ -91,6 +91,7 @@ end</code></pre>
                 <li>Used to safely call methods on values that might be <code>nil</code></li>
                 <li>Prevents <code>NoMethodError</code></li>
                 <li>Returns <code>nil</code> if the object is <code>nil</code></li>
+                <li>Ruby has no compile-time validation, so these checks are required at run time</li>
             </ul>
             <pre><code>user = nil
 user.name   <span class="c"># NoMethodError</span>
@@ -107,12 +108,12 @@ order&.customer&.email</code></pre>
                 <li><code>..</code> includes the end value</li>
                 <li><code>...</code> excludes the end value</li>
             </ul>
-            <pre><code><span class="c"># Inclusive range</span>
+            <pre><code><span class="c"># Inclusive range (all values from 1 to 5)</span>
 (1..5).each do |n|
   puts n
 end
 
-<span class="c"># Exclusive range</span>
+<span class="c"># Exclusive range (all values from 1 to 4)</span>
 (1...5).each do |n|
   puts n
 end

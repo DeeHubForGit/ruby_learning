@@ -104,7 +104,7 @@ false</code></pre>
         </div>
         <div class="block">
             <h3>Nil (represents no value)</h3>
-            <pre><code>nil</code></pre>
+            <pre><code>nil  <span class="c"># is Ruby’s equivalent of null</span></code></pre>
         </div>
         <div class="print-keep-together">
             <div class="block" id="print-arrays">
@@ -135,9 +135,16 @@ numbers.pop      <span class="c"># removes last item</span></code></pre>
                 </ul>
                 <pre><code>numbers = [1, 2, 3, 4, 5]
 
+<span class="c"># map changes each value</span>
 numbers.map { |n| n * 2 }      <span class="c"># [2, 4, 6, 8, 10]</span>
+
+<span class="c"># select keeps matching values</span>
 numbers.select { |n| n.even? } <span class="c"># [2, 4]</span>
+
+<span class="c"># reject removes matching values</span>
 numbers.reject { |n| n < 3 }   <span class="c"># [3, 4, 5]</span>
+
+<span class="c"># find returns first matching value</span>
 numbers.find { |n| n > 3 }     <span class="c"># 4</span></code></pre>
             </div>
         </div>
@@ -166,10 +173,15 @@ user.delete("age")</code></pre>
         <div class="block">
             <h2>Symbols (:symbol)</h2>
             <ul>
-                <li>Lightweight identifiers used as labels</li>
+                <li>Lightweight names used as labels (not variables)</li>
                 <li>Common as hash keys and method arguments</li>
             </ul>
-            <pre><code>:status</code></pre>
+            <pre><code><span class="c"># Symbol used as a hash key</span>
+user = {
+  name: "Alice",
+  age: 25
+}
+user[:name]   <span class="c"># "Alice"</span></code></pre>
         </div>
         <div class="block">
             <h2>Conditionals</h2>
@@ -177,6 +189,7 @@ user.delete("age")</code></pre>
             <ul>
                 <li>Modifier form for simple one-liners</li>
                 <li>Standard (e.g. <code>if … end</code>) for multi-line logic</li>
+                <li>if uses Truthiness (only <code>false</code> and <code>nil</code> are false). See Page 2</li>
             </ul>
             <pre><code><span class="c"># Standard if statement</span>
 if total > 40
