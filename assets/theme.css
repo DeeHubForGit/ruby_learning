@@ -145,6 +145,11 @@ pre code {
   font-weight: normal;
 }
 
+/* Small gap before the one-line "Other numeric types" note */
+.other-numeric-types {
+  margin-top: 0.35rem;
+}
+
 @media print {
   @page {
     size: A4 landscape;
